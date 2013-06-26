@@ -1,11 +1,24 @@
-To enable ZSH you first must install it
+1. You first must install ZSH
 sudo apt-get install zsh
 
-Then get the oh-my-zsh 
+2. Then get the oh-my-zsh 
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
-The .zshrc is configured to use a plugin for syntax highlighting
+3. The .zshrc is configured to use a plugin for syntax highlighting
+mkdir ~/.oh-my-zsh/custom/plugins
 cd ~/.oh-my-zsh/custom/plugins
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+
+4. Clone this repo
+cd ~
+git init
+git remote add origin https://kperusko@bitbucket.org/kperusko/ubuntu_settings/
+git pull -f origin master
+
+Check that everything is ok with
+git status -uno
+
+If pull cannot merge because of local changes try to revert changes
+git checkout -f --
 
 The .zshrc is configured to use the custom theme ~/.oh-my-zsh/themes/kperusko.zsh-theme
