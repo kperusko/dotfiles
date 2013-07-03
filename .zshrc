@@ -43,7 +43,7 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(gitfast git-extras heroku command-not-found node npm gnu-utils history-substring-search zsh-syntax-highlighting) 
 
 #syntax highlighters for the zsh-syntax-highlighting plugin
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
 
 source $ZSH/oh-my-zsh.sh
 
