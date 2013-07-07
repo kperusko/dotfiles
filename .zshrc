@@ -11,6 +11,10 @@ ZSH_THEME="kperusko"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias node="env NODE_NO_READLINE=1 rlwrap node"
+alias node_repl="node -e \"require('repl').start({ignoreUndefined: true})\""
+alias e="emacs --maximized"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
