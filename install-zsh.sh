@@ -22,5 +22,7 @@ if [ ! -d ./ubuntu_settings/ ]; then
     git clone https://kperusko@bitbucket.org/kperusko/ubuntu_settings/
 fi
 
-#Run the script link_files.zsh to create symbolic links from this repo
-sh ubuntu_settings/link_zsh_files.sh
+#Create symbolic links from this repo
+cd $HOME/ubuntu_settings
+ln -sf $(pwd)/.zshrc $HOME/.zshrc
+ln -sf $(pwd)/.oh-my-zsh/themes/kperusko.zsh-theme $HOME/.oh-my-zsh/themes/kperusko.zsh-theme
