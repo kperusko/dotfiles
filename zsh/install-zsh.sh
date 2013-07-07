@@ -23,6 +23,6 @@ if [ ! -d ./ubuntu_settings/ ]; then
 fi
 
 #Create symbolic links from this repo
-cd $HOME/ubuntu_settings
+cd $HOME/ubuntu_settings/zsh
 ln -sf $(pwd)/.zshrc $HOME/.zshrc
 ln -sf $(pwd)/.oh-my-zsh/themes/kperusko.zsh-theme $HOME/.oh-my-zsh/themes/kperusko.zsh-theme
