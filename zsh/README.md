@@ -1,4 +1,6 @@
-To install the ZSH and oh-my-zsh use the install_zsh.sh. 
+To install the ZSH and oh-my-zsh use the install.sh. 
 
-wget --user=kperusko --ask-password https://bitbucket.org/kperusko/ubuntu_settings/zsh/raw/master/install-zsh.sh
-sh install-zsh.sh
+```sh
+wget --user=kperusko --ask-password https://bitbucket.org/kperusko/ubuntu_settings/raw/master/zsh/install.sh
+sh install.sh
+```
