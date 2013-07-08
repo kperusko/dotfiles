@@ -1,6 +1,6 @@
-This is install script for the emacs24. The install script will install settings for emacs that will install NodeJS REPL.
+Installation of emacs with some customizations for NodeJS REPL.
 
-To install the emacs use the install.sh
+To install use the install.sh script. This is inteded for Ubuntu 12.x+
 
 ```sh
 wget --user=kperusko --ask-password https://bitbucket.org/kperusko/ubuntu_settings/raw/master/emacs/install.sh

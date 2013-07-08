@@ -10,4 +10,4 @@ if [ -d .emacs.d/ ]; then
 mv .emacs.d .emacs.d-old
 fi
 
-ln -sf ubuntu_settings/.emacs.d .
+ln -sf ubuntu_settings/emacs/.emacs.d .
