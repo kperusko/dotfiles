@@ -15,6 +15,11 @@ alias node="env NODE_NO_READLINE=1 rlwrap node"
 alias node_repl="node -e \"require('repl').start({ignoreUndefined: true})\""
 alias e="emacs --maximized"
 
+#set option for auto_cd'ing to frequent directories
+#this will enable to cd Bookingsystem from anywhere
+setopt auto_cd
+cdpath=($HOME/Zend/workspaces/DefaultWorkspace)
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
