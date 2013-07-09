@@ -15,11 +15,6 @@ alias node="env NODE_NO_READLINE=1 rlwrap node"
 alias node_repl="node -e \"require('repl').start({ignoreUndefined: true})\""
 alias e="emacs --maximized"
 
-#set option for auto_cd'ing to frequent directories
-#this will enable to cd Bookingsystem from anywhere
-setopt auto_cd
-cdpath=($HOME/Zend/workspaces/DefaultWorkspace)
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -58,3 +53,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/heroku/bin:$PATH
+
+# Add Zend workspace to the cdpath. This will enable to cd Bookingsystem from anywhere.
+# More paths can be added - example: cdpath=(/path/to/dir1 /path/dir2)
+cdpath=($HOME/Zend/workspaces/DefaultWorkspace/)
