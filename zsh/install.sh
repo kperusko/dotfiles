@@ -18,11 +18,11 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 #Clone this repo
 cd $HOME
 
-if [ ! -d ./ubuntu_settings/ ]; then
-    git clone https://kperusko@bitbucket.org/kperusko/ubuntu_settings/
+if [ ! -d ./dotfiles/ ]; then
+    git clone https://kperusko@bitbucket.org/kperusko/dotfiles/
 fi
 
 #Create symbolic links from this repo
-cd $HOME/ubuntu_settings/zsh
+cd $HOME/dotfiles/zsh
 ln -sf $(pwd)/.zshrc $HOME/.zshrc
 ln -sf $(pwd)/.oh-my-zsh/themes/kperusko.zsh-theme $HOME/.oh-my-zsh/themes/kperusko.zsh-theme
