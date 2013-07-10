@@ -26,8 +26,6 @@
 (setq show-trailing-whitespace t)
 (setq suggest-key-bindings t)
 (setq vc-follow-symlinks t)
-(setq auto-save-mode nil)
-(setq make-backup-files nil)
 (setq inhibit-startup-screen t)
 
 (custom-set-variables
@@ -37,6 +35,8 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (wombat)))
  '(global-linum-mode t)
+ '(make-backup-files nil)
+ '(electric-pair-mode t)
 )
 
 ;; ------------
