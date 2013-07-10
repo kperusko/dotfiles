@@ -15,6 +15,7 @@
 (require 'whitespace)
 (require 'dired-x)
 (require 'compile)
+(require 'autopair)
 (ido-mode t)
 (menu-bar-mode -1)
 (normal-erase-is-backspace-mode 1)
@@ -36,7 +37,7 @@
  '(custom-enabled-themes (quote (wombat)))
  '(global-linum-mode t)
  '(make-backup-files nil)
- '(electric-pair-mode t)
+ '(autopair-global-mode t)
 )
 
 ;; ------------
