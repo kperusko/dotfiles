@@ -34,11 +34,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(autopair-global-mode t)
  '(custom-enabled-themes (quote (wombat)))
  '(global-linum-mode t)
- '(make-backup-files nil)
- '(autopair-global-mode t)
-)
+ '(make-backup-files nil))
 
 ;; ------------
 ;; -- Macros --
@@ -67,3 +66,28 @@
 (require 'jade-mode)    
 (add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
+
+;; -------------------------------
+;; -- nxhtml Mode configuration --
+;; -------------------------------
+(load "~/.emacs.d/nxhtml/autostart.el")
+
+;; Workaround the annoying warnings:
+;; Warning (mumamo-per-buffer-local-vars):
+;; Already 'permanent-local t: buffer-file-name
+(when (and (>= emacs-major-version 24)
+(>= emacs-minor-version 2))
+(eval-after-load "mumamo"
+'(setq mumamo-per-buffer-local-vars
+(delq 'buffer-file-name mumamo-per-buffer-local-vars))))
+
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(mumamo-background-chunk-submode1 ((t nil)))
+ '(mumamo-background-chunk-submode2 ((t nil)))
+ '(mumamo-background-chunk-submode3 ((t nil)))
+ '(mumamo-background-chunk-submode4 ((t nil))))
