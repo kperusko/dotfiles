@@ -28,6 +28,7 @@
 (setq suggest-key-bindings t)
 (setq vc-follow-symlinks t)
 (setq inhibit-startup-screen t)
+(setq default-tab-width 4)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
