@@ -1061,7 +1061,7 @@ your `csharp-mode-hook' function:
 ;; ;; I don't remember what this is supposed to do,
 ;; ;; or how I figured out the value.
 ;; ;;
-;; (defconst csharp-font-lock-syntactic-keywords
+;; (defconst csharp-syntax-propertize-function
 ;;   '(("\\(@\\)\\(\"\\)[^\"]*\\(\"\\)\\(\"\\)[^\"]*\\(\"\\)[^\"]"
 ;;      (1 '(6)) (2 '(7)) (3 '(1)) (4 '(1)) (5 '(7))
 ;;                  ))
