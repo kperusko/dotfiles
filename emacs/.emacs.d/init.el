@@ -69,6 +69,14 @@
 (add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
 
+;; --------------------------------
+;; Auto-complete mode configuration
+;; --------------------------------
+(add-to-list 'load-path "/home/administrator/dotfiles/emacs/.emacs.d/auto-complete")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "/home/administrator/dotfiles/emacs/.emacs.d/auto-complete/ac-dict")
+(ac-config-default)
+
 ;; -------------------------------
 ;; -- nxhtml Mode configuration --
 ;; -------------------------------
@@ -82,7 +90,6 @@
 (eval-after-load "mumamo"
 '(setq mumamo-per-buffer-local-vars
 (delq 'buffer-file-name mumamo-per-buffer-local-vars))))
-
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
