@@ -80,7 +80,7 @@
 (define-derived-mode stylus-mode sws-mode
   "Stylus"
   "Major mode for editing stylus node.js templates"
-  (setq tab-width 2)
+  (setq tab-width 4)
 
   (setq mode-name "Stylus")
   (setq major-mode 'stylus-mode)
@@ -96,7 +96,7 @@
   (set (make-local-variable 'comment-end) "")
 
   ;; default tab width
-  (setq sws-tab-width 2)
+  (setq sws-tab-width 4)
   (make-local-variable 'indent-line-function)
   (setq indent-line-function 'sws-indent-line)
   (make-local-variable 'indent-region-function)
