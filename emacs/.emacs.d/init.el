@@ -110,6 +110,13 @@
                (add-to-list 'ac-sources 'ac-source-php-completion-patial)
                (auto-complete-mode t))))
 
+(require 'auto-complete-etags)
+
+;; ------------------------
+;; -- PHP quick doc help --
+;; ------------------------
+(load "php-documentation-lookup.el")
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
