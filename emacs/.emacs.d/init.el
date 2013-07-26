@@ -110,7 +110,8 @@
                (add-to-list 'ac-sources 'ac-source-php-completion-patial)
                (auto-complete-mode t))))
 
-(require 'auto-complete-etags)
+(load "auto-find-tags.el")
+(load "auto-complete-etags.el")
 
 ;; ------------------------
 ;; -- PHP quick doc help --
