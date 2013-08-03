@@ -106,6 +106,15 @@
 ;; ------------------------
 (load "php-documentation-lookup.el")
 
+;; ---------------
+;; -- yasnippet --
+;; ---------------
+(add-to-list 'load-path
+              "~/.emacs.d/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
+
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
