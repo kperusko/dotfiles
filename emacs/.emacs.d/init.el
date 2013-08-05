@@ -57,14 +57,6 @@
 (add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
 
-;; --------------------------------
-;; Auto-complete mode configuration
-;; --------------------------------
-(add-to-list 'load-path "/home/administrator/dotfiles/emacs/.emacs.d/auto-complete")
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/home/administrator/dotfiles/emacs/.emacs.d/auto-complete/ac-dict")
-(ac-config-default)
-
 ;; -------------------------------
 ;; -- nxhtml Mode configuration --
 ;; -------------------------------
@@ -78,6 +70,27 @@
 (eval-after-load "mumamo"
 '(setq mumamo-per-buffer-local-vars
 (delq 'buffer-file-name mumamo-per-buffer-local-vars))))
+
+;; ------------------------
+;; -- PHP quick doc help --
+;; ------------------------
+(load "php-documentation-lookup.el")
+
+;; ---------------
+;; -- yasnippet --
+;; ---------------
+;; (add-to-list 'load-path
+;;              "~/.emacs.d/yasnippet")
+;;(require 'yasnippet)
+;;(yas-global-mode 1)
+
+;; --------------------------------
+;; Auto-complete mode configuration
+;; --------------------------------
+(add-to-list 'load-path "~/.emacs.d/auto-complete")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
+(ac-config-default)
 
 ;; ----------------------
 ;; -- php-autocomplete --
@@ -100,20 +113,6 @@
 
 (load "auto-find-tags.el")
 (load "auto-complete-etags.el")
-
-;; ------------------------
-;; -- PHP quick doc help --
-;; ------------------------
-(load "php-documentation-lookup.el")
-
-;; ---------------
-;; -- yasnippet --
-;; ---------------
-(add-to-list 'load-path
-              "~/.emacs.d/yasnippet")
-(require 'yasnippet)
-(yas-global-mode 1)
-
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
