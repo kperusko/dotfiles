@@ -20,19 +20,3 @@ npm install -g jshint
 # See: http://nodejs.org/api/repl.html#repl_repl
 sudo apt-get install -y rlwrap
 
-if [ -f $HOME/.bashrc ];
-then 
-	$SHELL_PROFILE = $HOME/.bashrc
-fi
-
-if [ -f $HOME/.zshrc ];
-then 
-	$SHELL_PROFILE = $HOME/.zshrc
-fi
-
-cat >> SHELL_PROFILE <<EOF
-
-# Activate node version manager
-source $HOME/.nvm/nvm.sh
-nvm use v0.10.12
-EOF
