@@ -56,6 +56,12 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/local/heroku/bin:$PATH
 
+if [ -f  $HOME/.nvm/nvm.sh ]; then
+	source $HOME/.nvm/nvm.sh
+	nvm use v0.10.12 > /dev/null
+fi
+
 # Add Zend workspace to the cdpath. This will enable to cd Bookingsystem from anywhere.
 # More paths can be added - example: cdpath=(/path/to/dir1 /path/dir2)
 cdpath=($HOME/Zend/workspaces/DefaultWorkspace/)
+
