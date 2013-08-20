@@ -1,3 +1,4 @@
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -13,7 +14,6 @@ ZSH_THEME="kperusko"
 
 alias node="env NODE_NO_READLINE=1 rlwrap node"
 alias node_repl="node -e \"require('repl').start({ignoreUndefined: true})\""
-alias e="emacs --maximized"
 alias lless="/usr/share/vim/vimcurrent/macros/less.sh"
 alias ccat="pygmentize -g"
 
@@ -56,12 +56,20 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/local/heroku/bin:$PATH
 
-if [ -f  $HOME/.nvm/nvm.sh ]; then
-	source $HOME/.nvm/nvm.sh
-	nvm use v0.10.12 > /dev/null
-fi
-
 # Add Zend workspace to the cdpath. This will enable to cd Bookingsystem from anywhere.
 # More paths can be added - example: cdpath=(/path/to/dir1 /path/dir2)
 cdpath=($HOME/Zend/workspaces/DefaultWorkspace/)
 
+
+#CUSTOM FUNCTIONS
+
+#load nodeJS on demand
+function init_node(){
+	if [ -f  $HOME/.nvm/nvm.sh ]; then
+		source $HOME/.nvm/nvm.sh
+		nvm use v0.10.12 > /dev/null
+	fi
+}
+function e(){
+	nohup emacsclient -a "" -c $1 -F "((fullscreen . fullboth))" >/dev/null 2>&1 &
+}
