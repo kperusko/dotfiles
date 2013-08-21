@@ -61,15 +61,18 @@ export PATH=/usr/local/heroku/bin:$PATH
 cdpath=($HOME/Zend/workspaces/DefaultWorkspace/)
 
 
-#CUSTOM FUNCTIONS
+# CUSTOM FUNCTIONS
 
-#load nodeJS on demand
-function init_node(){
+# Load nodeJS on demand
+function node_init(){
 	if [ -f  $HOME/.nvm/nvm.sh ]; then
 		source $HOME/.nvm/nvm.sh
 		nvm use v0.10.12 > /dev/null
 	fi
 }
+
+# Alias for starting emacs.
+# Opens emacsclient and if no emacsserver is started if starts it.
 function e(){
-	nohup emacsclient -a "" -c $1 -F "((fullscreen . fullboth))" >/dev/null 2>&1 &
+	nohup emacsclient -a "" -c $1 -F "((fullscreen . maximized))" >/dev/null 2>&1 &
 }
