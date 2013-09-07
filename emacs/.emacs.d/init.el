@@ -118,6 +118,22 @@
 (load "auto-find-tags.el")
 (load "auto-complete-etags.el")
 
+;; ----------------------
+;; -- Custom functions --
+;; ----------------------
+
+(defun select-text-in-quote ()
+  "Selects the text in quotes like () {} \"\" '' "
+  (interactive)
+  (let (p1)
+    (skip-chars-backward "^<>({\'\"")
+    (setq p1 (point))
+    (skip-chars-forward "^<>)}\'\"")
+    (set-mark p1)))
+
+(global-set-key (kbd "M-*") 'select-text-in-quote)
+
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
