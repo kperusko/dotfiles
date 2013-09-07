@@ -30,7 +30,6 @@
 (setq suggest-key-bindings t)
 (setq vc-follow-symlinks t)
 (setq inhibit-startup-screen t)
-(setq auto-indent-on-visit-file t) ;; If you want auto-indent on for files
 (auto-indent-global-mode)
 
 ;; ------------
