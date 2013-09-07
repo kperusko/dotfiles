@@ -5,6 +5,7 @@
 ;; -- Global Settings --
 ;; ---------------------
 (add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/auto-indent-mode")
 (require 'cl)
 (require 'ido)
 (require 'ffap)
@@ -15,6 +16,7 @@
 (require 'whitespace)
 (require 'dired-x)
 (require 'compile)
+(require 'auto-indent-mode)
 (require 'autopair)
 (ido-mode t)
 (menu-bar-mode -1)
@@ -28,6 +30,8 @@
 (setq suggest-key-bindings t)
 (setq vc-follow-symlinks t)
 (setq inhibit-startup-screen t)
+(setq auto-indent-on-visit-file t) ;; If you want auto-indent on for files
+(auto-indent-global-mode)
 
 ;; ------------
 ;; -- Macros --
