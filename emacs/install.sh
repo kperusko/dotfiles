@@ -8,6 +8,8 @@ sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 cd $HOME
 if [ ! -d ./dotfiles/ ]; then
     git clone https://kperusko@bitbucket.org/kperusko/dotfiles/
+	git submodule init
+	git submodule update
 fi
 
 if [ -d .emacs.d/ ]; then
