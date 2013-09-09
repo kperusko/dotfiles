@@ -1,0 +1,3 @@
+[submodule "emacs/.emacs.d/auto-indent-mode"]
+	path = emacs/.emacs.d/auto-indent-mode
+	url = https://github.com/mlf176f2/auto-indent-mode.el
