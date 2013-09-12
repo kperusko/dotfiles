@@ -1,3 +1,6 @@
 [submodule "emacs/.emacs.d/auto-indent-mode"]
 	path = emacs/.emacs.d/auto-indent-mode
 	url = https://github.com/mlf176f2/auto-indent-mode.el
+[submodule "emacs/.emacs.d/emacs-powerline"]
+	path = emacs/.emacs.d/emacs-powerline
+	url = git://github.com/jonathanchu/emacs-powerline.git

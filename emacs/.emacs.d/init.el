@@ -6,6 +6,8 @@
 ;; ---------------------
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/auto-indent-mode")
+(add-to-list 'load-path "~/.emacs.d/emacs-powerline")
+(require 'powerline)
 (require 'cl)
 (require 'ido)
 (require 'ffap)
@@ -18,6 +20,7 @@
 (require 'compile)
 (require 'auto-indent-mode)
 (require 'autopair)
+(require 'powerline)
 (ido-mode t)
 (menu-bar-mode -1)
 (normal-erase-is-backspace-mode 1)
