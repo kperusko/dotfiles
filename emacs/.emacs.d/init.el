@@ -21,6 +21,7 @@
 (require 'auto-indent-mode)
 (require 'autopair)
 (require 'powerline)
+(require 'sr-speedbar)
 (ido-mode t)
 (menu-bar-mode -1)
 (normal-erase-is-backspace-mode 1)
@@ -34,6 +35,7 @@
 (setq vc-follow-symlinks t)
 (setq inhibit-startup-screen t)
 (auto-indent-global-mode)
+(sr-speedbar-open)
 
 ;; ------------
 ;; -- Macros --
