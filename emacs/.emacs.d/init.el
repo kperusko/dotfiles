@@ -35,7 +35,6 @@
 (setq vc-follow-symlinks t)
 (setq inhibit-startup-screen t)
 (auto-indent-global-mode)
-(sr-speedbar-open)
 
 ;; ------------
 ;; -- Macros --
