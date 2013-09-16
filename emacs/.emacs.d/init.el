@@ -24,6 +24,8 @@
 (require 'sr-speedbar)
 (ido-mode t)
 (menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
 (normal-erase-is-backspace-mode 1)
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
@@ -136,7 +138,6 @@
 
 (global-set-key (kbd "M-*") 'select-text-in-quote)
 
-
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -164,3 +165,5 @@
  '(nxml-child-indent 4)
  '(speedbar-show-unknown-files t)
  '(tab-stop-list (quote (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60))))
+
+
