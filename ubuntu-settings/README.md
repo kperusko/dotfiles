@@ -7,9 +7,10 @@ Global configuration settings for Ubuntu (tested on 13.10).
 Script synaptics-two-finger-scroll.sh must be started on startup. It enables the 
 two finger scroll (vert & horiz) and adjusts the scrolling speed.
 
+
 -	**Bluetooth off on startup**
 
-	edit /etc/bluetooth/main.conf
+	edit **/etc/bluetooth/main.conf**
 
     	 InitiallyPowered = false
 
