@@ -15,12 +15,13 @@ mkdir $HOME/.oh-my-zsh/custom/plugins
 cd $HOME/.oh-my-zsh/custom/plugins
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
-#Clone this repo
+#Clone dotfiles repo
 cd $HOME
-
 if [ ! -d ./dotfiles/ ]; then
     git clone https://kperusko@bitbucket.org/kperusko/dotfiles/
-fi
+    git submodule init
+    git submodule update
+fi    
 
 # Create symbolic links from this repo
 cd $HOME/dotfiles/zsh

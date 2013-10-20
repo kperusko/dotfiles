@@ -4,13 +4,13 @@ sudo apt-add-repository -y ppa:cassou/emacs
 sudo apt-get update
 sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 
-# git pull and install configs as well
+# git pull and install dotfiles
 cd $HOME
 if [ ! -d ./dotfiles/ ]; then
     git clone https://kperusko@bitbucket.org/kperusko/dotfiles/
-	git submodule init
-	git submodule update
-fi
+    git submodule init
+    git submodule update
+fi    
 
 if [ -d .emacs.d/ ]; then
     mv .emacs.d .emacs.d-old

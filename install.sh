@@ -1,7 +1,9 @@
 cd $HOME
 if [ ! -d ./dotfiles/ ]; then
     git clone https://kperusko@bitbucket.org/kperusko/dotfiles/
-fi
+    git submodule init
+    git submodule update
+fi    
 
 sh dotfiles/zsh/install.sh
 sh dotfiles/emacs/install.sh
