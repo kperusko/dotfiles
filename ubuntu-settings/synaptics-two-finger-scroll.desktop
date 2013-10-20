@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=sh ~/dotfiles/ubuntu-settings/synaptics-two-finger-scroll.sh
+Exec=sh HOME_PATH/dotfiles/ubuntu-settings/synaptics-two-finger-scroll.sh
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true

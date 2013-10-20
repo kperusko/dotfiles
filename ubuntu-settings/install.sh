@@ -7,7 +7,9 @@ if [ ! -d ./.config/autostart ]; then
 fi
 
 cd $HOME/dotfiles/ubuntu-settings
-ln -sf $(pwd)/synaptics-two-finger-scroll.desktop $HOME/.config/autostart/synaptics-two-finger-scroll.desktop
+cp -f $(pwd)/synaptics-two-finger-scroll.desktop $HOME/.config/autostart/synaptics-two-finger-scroll.desktop
+SED_EXPRESSION="s,HOME_PATH,$HOME,"
+sed -i "$SED_EXPRESSION" $HOME/.config/autostart/synaptics-two-finger-scroll.desktop
 
 #2. bluetooth off by default
 sudo sed -i 's/InitiallyPowered = true/InitiallyPowered = false/' /etc/bluetooth/main.conf
