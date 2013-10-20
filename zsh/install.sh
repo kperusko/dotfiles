@@ -27,8 +27,3 @@ fi
 cd $HOME/dotfiles/zsh
 ln -sf $(pwd)/.zshrc $HOME/.zshrc
 ln -sf $(pwd)/.oh-my-zsh/themes/kperusko.zsh-theme $HOME/.oh-my-zsh/themes/kperusko.zsh-theme
-
-# Import gnome-terminal settings with gconftool-2
-# just copying the XML config will will not work)
-# These settings are not dependent on zsh.
-gconftool-2 --load gnome-terminal.xml

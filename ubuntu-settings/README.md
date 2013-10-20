@@ -14,4 +14,4 @@ two finger scroll (vert & horiz) and adjusts the scrolling speed.
 
     	 InitiallyPowered = false
 
-
+3.  **Import terminal settings**
