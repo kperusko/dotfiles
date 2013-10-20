@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=sh ~/dotfiles/ubuntu-settings/synaptics-two-finger-scroll.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=synaptic-two-finger-scroll-fix
+Name=synaptic-two-finger-scroll-fix
