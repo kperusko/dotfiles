@@ -16,6 +16,7 @@ alias node="env NODE_NO_READLINE=1 rlwrap node"
 alias node_repl="node -e \"require('repl').start({ignoreUndefined: true})\""
 alias lless="/usr/share/vim/vimcurrent/macros/less.sh"
 alias ccat="pygmentize -g"
+alias psg="ps aux | grep "
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
