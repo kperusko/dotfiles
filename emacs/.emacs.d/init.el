@@ -42,6 +42,18 @@
 (setq inhibit-startup-screen t)
 (setq show-paren-delay 0) ;; don't delay showing matching parenthesis
 
+;; -------------------------
+;; -- UTF-8 coding system --
+;; -------------------------
+(setq locale-coding-system 'utf-8)
+(setq terminal-coding-system 'utf-8)
+(setq keyboard-coding-system 'utf-8)
+(setq selection-coding-system 'utf-8)
+(setq coding-system-for-read 'utf-8)
+(setq coding-system-for-write 'utf-8)
+(set-language-environment "UTF-8")
+(prefer-coding-system 'utf-8)
+
 ;; -----------------------------
 ;; -- Recent files minor mode --
 ;; -----------------------------
