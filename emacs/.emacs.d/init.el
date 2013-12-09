@@ -151,6 +151,9 @@
 (load "auto-find-tags.el")
 (load "auto-complete-etags.el")
 
+;; Open *.m files with octave-mode by default
+(add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
+
 ;; ----------------------
 ;; -- Custom functions --
 ;; ----------------------
