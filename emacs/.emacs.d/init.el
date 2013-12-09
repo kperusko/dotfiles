@@ -27,6 +27,10 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (normal-erase-is-backspace-mode 1)
+(show-paren-mode t)
+(blink-cursor-mode t)
+(winner-mode t)
+(auto-indent-global-mode)
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (setq column-number-mode t)
@@ -36,7 +40,19 @@
 (setq suggest-key-bindings t)
 (setq vc-follow-symlinks t)
 (setq inhibit-startup-screen t)
-(auto-indent-global-mode)
+(setq show-paren-delay 0) ;; don't delay showing matching parenthesis
+
+;; -----------------------------
+;; -- Recent files minor mode --
+;; -----------------------------
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+
+;; -------------------------
+;; -- Custom key mappings --
+;; -------------------------
+(global-set-key (kbd "C-x C-b") 'ibuffer) ;; use ibuffer instead of BufferMenu
 
 ;; ------------
 ;; -- Macros --
