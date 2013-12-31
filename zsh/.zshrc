@@ -69,6 +69,8 @@ function node_init(){
 	if [ -f  $HOME/.nvm/nvm.sh ]; then
 		source $HOME/.nvm/nvm.sh
 		nvm use v0.10.12 > /dev/null
+	else
+		echo "nvm is not installed"
 	fi
 }
 
