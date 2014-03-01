@@ -47,7 +47,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gitfast git-extras heroku command-not-found node npm gnu-utils history-substring-search zsh-syntax-highlighting) 
+plugins=(gitfast git-extras command-not-found gnu-utils history-substring-search zsh-syntax-highlighting) 
 
 #syntax highlighters for the zsh-syntax-highlighting plugin
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
@@ -55,7 +55,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/heroku/bin:$PATH
+#export PATH=/usr/local/heroku/bin:$PATH
 
 # Add Zend workspace to the cdpath. This will enable to cd Bookingsystem from anywhere.
 # More paths can be added - example: cdpath=(/path/to/dir1 /path/dir2)
@@ -75,7 +75,7 @@ function node_init(){
 }
 
 # Alias for starting emacs.
-# Opens emacsclient and if no emacsserver is started if starts it.
+# Opens emacsclient and starts an emacsserver if not already started
 function e(){
 	nohup emacsclient -a "" -c $1 -F "((fullscreen . maximized))" >/dev/null 2>&1 &
 }
