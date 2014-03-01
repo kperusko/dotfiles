@@ -8,10 +8,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="kperusko"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 alias node="env NODE_NO_READLINE=1 rlwrap node"
 alias node_repl="node -e \"require('repl').start({ignoreUndefined: true})\""
 alias lless="/usr/share/vim/vimcurrent/macros/less.sh"
@@ -46,8 +42,12 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gitfast git-extras command-not-found gnu-utils history-substring-search zsh-syntax-highlighting) 
+plugins=(gitfast git-extras command-not-found gnu-utils history-substring-search zsh-syntax-highlighting)
+
+# load additional plugins for Fedora
+if [ `lsb_release -s -i` = "Fedora" ]; then
+	plugins+=(yum systemd)
+fi
 
 #syntax highlighters for the zsh-syntax-highlighting plugin
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
