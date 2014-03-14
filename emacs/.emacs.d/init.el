@@ -22,6 +22,7 @@
 (require 'autopair)
 (require 'powerline)
 (require 'sr-speedbar)
+(require 'transpose-frame)
 (ido-mode t)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -201,3 +202,4 @@
 (require 'package)
   (package-initialize)
   (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
