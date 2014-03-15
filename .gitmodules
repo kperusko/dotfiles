@@ -4,3 +4,6 @@
 [submodule "emacs/.emacs.d/emacs-powerline"]
 	path = emacs/.emacs.d/emacs-powerline
 	url = git://github.com/jonathanchu/emacs-powerline.git
+[submodule "emacs/.emacs.d/emacs-minimap"]
+	path = emacs/.emacs.d/emacs-minimap
+	url = https://github.com/kperusko/emacs-minimap.git

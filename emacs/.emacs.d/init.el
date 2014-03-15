@@ -1,4 +1,3 @@
-;; -*- mode: emacs-lisp -*-
 ;; Simple .emacs configuration
 
 ;; ---------------------
@@ -195,6 +194,9 @@
  '(global-linum-mode t)
  '(ido-mode (quote both) nil (ido))
  '(make-backup-files nil)
+ '(minimap-recenter-type (quote free))
+ '(minimap-update-delay 0)
+ '(minimap-window-location (quote right))
  '(nxml-child-indent 4)
  '(speedbar-show-unknown-files t)
  '(tab-stop-list (quote (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60))))
@@ -203,3 +205,4 @@
   (package-initialize)
   (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
+(require 'minimap)
