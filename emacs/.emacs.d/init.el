@@ -1,11 +1,10 @@
-;; Simple .emacs configuration
-
 ;; ---------------------
 ;; -- Global Settings --
 ;; ---------------------
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/auto-indent-mode")
 (add-to-list 'load-path "~/.emacs.d/emacs-powerline")
+(add-to-list 'load-path "~/.emacs.d/emacs-minimap")
 (require 'powerline)
 (require 'cl)
 (require 'ido)
@@ -22,6 +21,7 @@
 (require 'powerline)
 (require 'sr-speedbar)
 (require 'transpose-frame)
+(require 'minimap)
 (ido-mode t)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -205,4 +205,6 @@
   (package-initialize)
   (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
-(require 'minimap)
+;; start minimap
+;; this will start minimap only when not using emacs deamon 
+(minimap-create)
