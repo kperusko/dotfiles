@@ -6,7 +6,7 @@ if [ ! -d ./.config/autostart ]; then
 	mkdir $(pwd)/.config/autostart
 fi
 
-cd $HOME/dotfiles/ubuntu-settings
+cd $HOME/dotfiles/linux-settings
 cp -f $(pwd)/synaptics-two-finger-scroll.desktop $HOME/.config/autostart/synaptics-two-finger-scroll.desktop
 SED_EXPRESSION="s,HOME_PATH,$HOME,"
 sed -i "$SED_EXPRESSION" $HOME/.config/autostart/synaptics-two-finger-scroll.desktop
