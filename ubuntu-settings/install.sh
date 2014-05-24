@@ -11,9 +11,17 @@ cp -f $(pwd)/synaptics-two-finger-scroll.desktop $HOME/.config/autostart/synapti
 SED_EXPRESSION="s,HOME_PATH,$HOME,"
 sed -i "$SED_EXPRESSION" $HOME/.config/autostart/synaptics-two-finger-scroll.desktop
 
-#2. bluetooth off by default
-sudo sed -i 's/InitiallyPowered = true/InitiallyPowered = false/' /etc/bluetooth/main.conf
+#Add fix for the Fedora so that the two finger scroll script is executed on resume
+if [ `lsb_release -s -i` = "Fedora" ]; then
+	sudo cp $(pwd)/mouse-scroll.sh /usr/lib/systemd/system-sleep
+fi
 
-#3. Import gnome-terminal settings with gconftool-2
-# just copying the XML config will will not work
-gconftool-2 --load gnome-terminal.xml
+if [ `lsb_release -s -i` = "Ubuntu" ]; then
+	#2. bluetooth off by default
+	sudo sed -i 's/InitiallyPowered = true/InitiallyPowered = false/' /etc/bluetooth/main.conf
+
+	#3. Import gnome-terminal settings with gconftool-2
+	# just copying the XML config will will not work
+	# configuration is just for Ubuntu
+	gconftool-2 --load gnome-terminal.xml
+fi
