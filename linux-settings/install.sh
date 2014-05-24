@@ -25,3 +25,14 @@ if [ `lsb_release -s -i` = "Ubuntu" ]; then
 	# configuration is just for Ubuntu
 	gconftool-2 --load gnome-terminal.xml
 fi
+
+# if VMware player services are disabled
+# use the vmware.sh script to start them when starting VMware player
+# cp $(pwd)/vmware-player.desktop ~/.local/share/applications/vmware-player.desktop
+
+# remove existing launcher if exists
+# VMPLAYER_DESKTOP=/usr/share/applications/vmware-player.desktop
+# if [ -f $VMPLAYER_DESKTOP ]; then
+#     sudo rm $VMPLAYER_DESKTOP
+# fi
+
