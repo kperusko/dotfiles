@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=VMware Player
+Comment=Run a virtual machine
+Terminal=true
+Exec=/home/kristijan/dotfiles/linux-settings/vmware.sh
+Type=Application
+Icon=vmware-player
