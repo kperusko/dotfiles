@@ -206,5 +206,9 @@
   (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ;; start minimap
-;; this will start minimap only when not using emacs deamon 
-(minimap-create)
+;; this will start minimap only when not using emacs deamon
+;; removed starting of minimap automatically
+;; because of the bug that causes error when launching emacs
+;; in daemon mode
+;; "window to small for splitting"
+;;(minimap-create)
