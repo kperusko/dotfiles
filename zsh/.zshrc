@@ -12,7 +12,7 @@ alias node="env NODE_NO_READLINE=1 rlwrap node"
 alias node_repl="node -e \"require('repl').start({ignoreUndefined: true})\""
 alias lless="/usr/share/vim/vimcurrent/macros/less.sh"
 alias ccat="pygmentize -g"
-alias psg="ps aux | grep "
+alias psg="ps aux | head -1 && ps aux | grep "
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -59,7 +59,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Add Zend workspace to the cdpath. This will enable to cd Bookingsystem from anywhere.
 # More paths can be added - example: cdpath=(/path/to/dir1 /path/dir2)
-cdpath=($HOME/Zend/workspaces/DefaultWorkspace/)
+cdpath=($HOME/workspace/)
 
 
 # CUSTOM FUNCTIONS
