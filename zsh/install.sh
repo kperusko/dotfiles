@@ -18,7 +18,7 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 #Clone dotfiles repo
 cd $HOME
 if [ ! -d ./dotfiles/ ]; then
-    git clone https://kperusko@bitbucket.org/kperusko/dotfiles/
+    git clone https://kperusko@gihub.com/kperusko/dotfiles/
     git submodule init
     git submodule update
 fi    
