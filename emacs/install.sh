@@ -7,7 +7,7 @@ sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 # git pull and install dotfiles
 cd $HOME
 if [ ! -d ./dotfiles/ ]; then
-    git clone https://kperusko@gihub.com/kperusko/dotfiles/
+    git clone https://kperusko@github.com/kperusko/dotfiles/
     git submodule init
     git submodule update
 fi    
