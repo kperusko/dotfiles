@@ -11,8 +11,8 @@ git clone https://github.com/creationix/nvm.git $HOME/.nvm
 
 # Load nvm and install latest production node
 source $HOME/.nvm/nvm.sh
-nvm install v0.10.12
-nvm use v0.10.12
+nvm install v0.10.33
+nvm use v0.10.33
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
