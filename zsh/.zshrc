@@ -1,4 +1,3 @@
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -8,11 +7,10 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="kperusko"
 
-alias node="env NODE_NO_READLINE=1 rlwrap node"
-alias node_repl="node -e \"require('repl').start({ignoreUndefined: true})\""
 alias lless="/usr/share/vim/vimcurrent/macros/less.sh"
 alias ccat="pygmentize -g"
 alias psg="ps aux | head -1 && ps aux | grep "
+alias gdc="git diff --cached"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -38,16 +36,28 @@ DISABLE_AUTO_UPDATE="true"
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
 # much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(gitfast git-extras command-not-found gnu-utils history-substring-search zsh-syntax-highlighting)
+plugins=(gitfast git-extras dircycle command-not-found gnu-utils history-substring-search zsh-syntax-highlighting)
 
-# load additional plugins for Fedora
-if [ `lsb_release -s -i` = "Fedora" ]; then
-	plugins+=(yum systemd)
-fi
+
+# Detect the OS type and load additional plugins
+case "$OSTYPE" in
+darwin*) plugins+=(brew) ;; 
+linux*)
+    case `lsb_release -s -i` in
+    Fedora)
+        plugins+=(yum systemd)
+        ;;
+    Ubuntu)
+        plugins+=(systemd)
+        ;;
+    esac
+    ;;
+*) echo "unknown: $OSTYPE" ;;
+esac
 
 #syntax highlighters for the zsh-syntax-highlighting plugin
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
@@ -55,27 +65,49 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-#export PATH=/usr/local/heroku/bin:$PATH
+#export PATH=/usr/local/heroku/bin:$HOME/.rbenv/bin:$PATH
+PATH="/usr/local/bin:$HOME/.composer/vendor/bin:$PATH"
 
-# Add Zend workspace to the cdpath. This will enable to cd Bookingsystem from anywhere.
+
+# Add frequently used folder to the cdpath. This will enable to cd to ~/Code from anywhere
 # More paths can be added - example: cdpath=(/path/to/dir1 /path/dir2)
-cdpath=($HOME/workspace/)
+cdpath=($HOME/Code/)
 
+# Start evals
+#eval "$(rbenv init -)"
 
 # CUSTOM FUNCTIONS
-
-# Load nodeJS on demand
-function node_init(){
-	if [ -f  $HOME/.nvm/nvm.sh ]; then
-		source $HOME/.nvm/nvm.sh
-		nvm use v0.10.33 > /dev/null
-	else
-		echo "nvm is not installed"
-	fi
-}
 
 # Alias for starting emacs.
 # Opens emacsclient and starts an emacsserver if not already started
 function e(){
 	nohup emacsclient -a "" -c $1 -F "((fullscreen . maximized))" >/dev/null 2>&1 &
+}
+
+# Echoes the argument in the red color
+function echo_red(){
+    REDTXT=$1
+    TXT=$2
+    RED='\033[0;31m'
+    NC='\033[0m' # No Color
+    echo -e "${RED}${REDTXT}${NC}${TXT}"
+}
+
+# Prints the command in red color before running it
+function run_cmd(){
+    echo_red 'Executing command: '$1
+    eval $1
+}
+
+# Shortcut for rebasing local branches
+# IMPORTANT:
+# * Deletes the local branch even if it was not fully merged to upstream!
+# * Force pushes the branch
+function grbtb(){
+    run_cmd 'gb -D '$1 # delete the local branch so we can get the latest version i next step
+    run_cmd 'gco '$1 || false
+    run_cmd 'git rebase develop' || false
+    run_cmd 'ggpush -f' || false 
+    run_cmd 'gco develop' || false
+    run_cmd 'gm '$1 || false
 }
